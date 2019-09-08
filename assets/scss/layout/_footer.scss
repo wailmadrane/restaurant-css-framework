@@ -1,0 +1,28 @@
+// ### Footer
+
+.footer {
+   &__social {
+         /* background-color: darkblue; */
+         background-color: #00743F;
+   
+         &-link {
+               color: lightgrey;
+               font-size: 1.3rem;
+               margin: 0 .4rem;
+         
+               &:hover {
+                     color: white;
+               }
+         }
+   }
+
+   &__copyright {
+         /* background-color: rgb(5, 5, 61); */
+         background-color: #F2A104;
+         color: #454545;
+   
+         &-link {
+               color: #00743F;
+         }
+   }
+}

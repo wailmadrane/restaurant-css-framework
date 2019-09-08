@@ -5,25 +5,37 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+   <!-- Description -->
+   <meta name="author" content="Wail Madrane">
+   <meta name="description"
+      content="LiquiFood is an experimental restaurant based in NYC serving food in liquid form" />
    <title>Welcome</title>
 
-   <!-- bootstrap css -->
+   <!-- Bootstrap css -->
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-   <!-- css -->
+   <!-- Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+      integrity="sha256-zmfNZmXoNWBMemUOo1XUGFfc0ihGGLYdgtJS3KCr/l0=" crossorigin="anonymous" />
+
+   <!-- Style css -->
    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 <body class="welcome">
-   <div class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+   <!-- Menu bar -->
+   <div class="navbar navbar-expand-md navbar-dark fixed-top menu-bar">
 
       <div class="d-flex flex-grow-1">
-         <span class="w-100 d-md-none d-block">
-            <!-- hidden spacer to center brand on mobile --></span>
-         <!-- logo -->
-         <a class="navbar-brand m-0 mx-md-1" href="#">
+         <!-- Hidden spacer to center brand on mobile -->
+         <span class="w-100 d-md-none d-block"></span>
+
+         <!-- Logo -->
+         <a class="navbar-brand logo m-0 mx-md-1" href="#">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.5px" height="62.25px"
                viewBox="0 0 84 166" enable-background="new 0 0 84 166" xml:space="preserve">
@@ -202,7 +214,7 @@
             </svg>
          </a>
 
-         <!-- burger menu -->
+         <!-- Burger Menu -->
          <div class="d-flex align-items-center justify-content-end w-100 text-right">
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -211,11 +223,12 @@
             </button>
          </div>
       </div>
-      <!-- nav -->
+
+      <!-- Navigation -->
       <nav class="navbar-collapse collapse flex-grow-1 justify-content-md-end text-center" id="navbarSupportedContent">
 
          <ul class="navbar-nav my-1">
-            <li class="nav-item">
+            <li class="nav-item active">
                <a class="nav-link my-1 mx-md-2" href="index.html">Welcome</a>
             </li>
             <li class="nav-item">
@@ -231,28 +244,58 @@
                <a class="nav-link my-1" href="contact.html">Contact</a>
             </li>
          </ul>
-
       </nav>
+
    </div>
 
+   <!-- Jumbotron -->
+   <header class="jumbotron jumbotron-fluid mb-0">
+      <div class="container px-4 px-sm-1 my-sm-5">
+         <h1 class="display-4">Welcome to LiquiFood!</h1>
+         <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quae assumenda nisi
+            dignissimos necessitatibus deleniti ea doloribus, magnam excepturi consequuntur! Rerum excepturi atque
+            quisquam ducimus sapiente itaque quidem mollitia tempore.
+         </p>
+      </div>
+   </header>
+
+   <!-- Panels -->
    <main>
-      <section class="jumbotron jumbotron-fluid">
-         <div class="container">
-            <h1 class="display-4">Fluid jumbotron</h1>
-            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-         </div>
-      </section>
       <section class="container-fluid">
          <div class="row">
-            <article class="col-md-6">panel #1</article>
-            <article class="col-md-6">panel #2</article>
+            <a href="#" class="col-md-6 panel panel-right">
+               <h2 class="display-5 panel__title">
+                  New product #1
+               </h2>
+            </a>
+            <a href="#" class="col-md-6 panel panel-left">
+               <h2 class="display-5 panel__title">
+                  New product #2
+               </h2>
+            </a>
          </div>
       </section>
    </main>
 
-   <footer class="bg-dark">
-      <div class="container">footer</div>
+   <footer class="footer">
+      <!-- Social Networks -->
+      <div class="footer__social text-center py-3">
+         <a href="#" class="fab fa-facebook-f footer__social-link"></a>
+         <a href="#" class="fab fa-twitter footer__social-link"></a>
+         <a href="#" class="fab fa-instagram footer__social-link"></a>
+      </div>
+      <!-- Copyright -->
+      <div class="footer__copyright text-center py-3">
+         &copy; 2018 Copyright:
+         <a href="#" class="footer__copyright-link"> liquifood.com</a>
+      </div>
    </footer>
+
+
+   <!-- /////////////// -->
+   <!-- ///// JS ////// -->
+   <!-- /////////////// -->
 
    <!-- jquery -->
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

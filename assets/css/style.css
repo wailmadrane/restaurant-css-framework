@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap");
+/* 
+font-family: 'Raleway', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+.panel {
+  height: calc(50vw * 0.78125);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: lightgrey;
+}
+
+.panel:hover {
+  color: white;
+}
+
+.panel-right {
+  /* background-image: url('../img/1024x800.png'); */
+}
+
+.panel-left {
+  /* background-image: url('../img/1024x800.png'); */
+}
+
+.panel__title {
+  position: relative;
+  z-index: 1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.panel:hover .panel__title {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.panel::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #384047;
+  opacity: .5;
+  -webkit-transition: .3s opacity ease-in-out;
+  transition: .3s opacity ease-in-out;
+}
+
+.panel:hover::before {
+  opacity: .3;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none !important;
+  -webkit-transition: .3s color ease-in-out;
+  transition: .3s color ease-in-out;
+}
+
+.footer__social {
+  /* background-color: darkblue; */
+  background-color: #00743F;
+}
+
+.footer__social-link {
+  color: lightgrey;
+  font-size: 1.3rem;
+  margin: 0 .4rem;
+}
+
+.footer__social-link:hover {
+  color: white;
+}
+
+.footer__copyright {
+  /* background-color: rgb(5, 5, 61); */
+  background-color: #F2A104;
+  color: #454545;
+}
+
+.footer__copyright-link {
+  color: #00743F;
+}
+
+.menu-bar {
+  background-color: #192E5B;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-brand.abs {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+}
+
+.welcome {
+  margin-top: 88.25px;
+}
+/*# sourceMappingURL=style.css.map */
