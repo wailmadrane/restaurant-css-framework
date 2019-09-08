@@ -1,0 +1,17 @@
+// ### Header
+.hero {
+   @media screen and (min-width: 1024px) {
+      text-align: center;
+   }
+}
+
+.btn.btn-custom {
+   color: $dark-blue;
+   border-color: $dark-blue;
+   text-transform: uppercase;
+
+   &:hover {
+      background-color: $dark-blue;
+      color: $light-blue;
+   }
+}

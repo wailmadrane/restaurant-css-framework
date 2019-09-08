@@ -1,61 +1,61 @@
 // ## Panel
 
 .panel {
-   height: calc(50vw * 0.78125);
-   background-position: center;
-   background-size: cover;
+	height: calc(50vw * 0.78125);
+	background-position: center;
+	background-size: cover;
 
-   position: relative;
+	position: relative;
 
-   display: flex;
-   justify-content: center;
-   align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-   text-transform: uppercase;
-   font-weight: bold;
-   color: lightgrey;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: lightgrey;
 
-   &:hover {
-         color: white;
-   }
+	&:hover {
+		color: white;
+	}
 
-   // Panel Pictures
-   &-right {
-         /* background-image: url('../img/1024x800.png'); */
-   }
-   
-   &-left {
-         /* background-image: url('../img/1024x800.png'); */
-   }
-   
-   // Panel Title
-   &__title {
-         position: relative;
-         z-index: 1;
-         transition: .3s ease-in-out;
-   }
+	// Panel Pictures
+	&-right {
+		background-image: url("../img/drink11.jpg");
+	}
 
-   &:hover &__title {
-         transform: scale(1.1);
-   }
-   
-   // Overlayer
-   &::before {
-         content: '';
-         display: block;
-   
-         position: absolute;
-         top: 0;
-         left: 0;
-         right: 0;
-         bottom: 0;
-   
-         background-color: rgb(56, 64, 71);
-         opacity: .5;
-         transition: .3s opacity ease-in-out;
-   }
+	&-left {
+		background-image: url("../img/drink05.jpg");
+	}
 
-   &:hover::before {
-         opacity: .3;
-   }
+	// Panel Title
+	&__title {
+		position: relative;
+		z-index: 1;
+		transition: 0.3s ease-in-out;
+	}
+
+	&:hover &__title {
+		transform: scale(1.1);
+	}
+
+	// Overlayer
+	&::before {
+		content: "";
+		display: block;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		background-color: rgb(56, 64, 71);
+		opacity: 0.5;
+		transition: 0.3s opacity ease-in-out;
+	}
+
+	&:hover::before {
+		opacity: 0.3;
+	}
 }

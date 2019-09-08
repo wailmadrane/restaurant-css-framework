@@ -3,12 +3,12 @@
 .footer {
    &__social {
          /* background-color: darkblue; */
-         background-color: #00743F;
+         background-color: $green;
    
          &-link {
                color: lightgrey;
-               font-size: 1.3rem;
-               margin: 0 .4rem;
+               font-size: 1.5rem;
+               margin: 0 .5rem;
          
                &:hover {
                      color: white;
@@ -18,11 +18,10 @@
 
    &__copyright {
          /* background-color: rgb(5, 5, 61); */
-         background-color: #F2A104;
-         color: #454545;
+         background-color: $orange;
    
          &-link {
-               color: #00743F;
+               color: $green;
          }
    }
 }

@@ -1,5 +1,12 @@
 // #### Welcome
 
 .welcome {
-   margin-top: 88.25px;
+
+   .hero {
+      background-color: $light-blue;
+
+      @media screen and (min-width: 1024px) {
+         padding: 10rem 0 !important;
+      }
+   }
 }
