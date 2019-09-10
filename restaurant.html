@@ -21,7 +21,8 @@
       integrity="sha256-zmfNZmXoNWBMemUOo1XUGFfc0ihGGLYdgtJS3KCr/l0=" crossorigin="anonymous" />
 
    <!-- Openlayers -->
-   <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+   <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css"
+      type="text/css">
 
    <!-- Style css -->
    <link rel="stylesheet" href="assets/css/style.css">
@@ -261,12 +262,67 @@
    <!-- A propos -->
    <main>
       <div class="container">
+         <div class="row my-5 py-md-5">
 
-         <div class="row">
-            
+            <div class="col-md-4">
+               <h2 class="display-5">Address</h2>
+               <address>Cantersteen 12, 1000 Bruxelles</address>
+            </div>
+
+            <div class="col-md-8">
+               <h2 class="display-5">Schedules</h2>
+
+               <table class="table">
+                  <thead>
+                     <tr>
+                        <th>Day</th>
+                        <th>Opening</th>
+                        <th>Closeing</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <th scope="row">Mon</th>
+                        <td>11:30</td>
+                        <td>23:30</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Tue</th>
+                        <td>11:30</td>
+                        <td>23:30</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Wed</th>
+                        <td>11:30</td>
+                        <td>23:30</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Thu</th>
+                        <td>11:30</td>
+                        <td>23:30</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Fri</th>
+                        <td>11:30</td>
+                        <td>23:30</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Sat</th>
+                        <td>11:30</td>
+                        <td>23:30</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">Sun</th>
+                        <td class="text-danger">close</td>
+                        <td class="text-danger">close</td>
+                     </tr>
+                  </tbody>      
+               </table>
+            </div>
+
          </div>
-
       </div>
+
       <div id="map" class="map"></div>
    </main>
 
@@ -311,63 +367,63 @@
    <script src="assets/js/main.js"></script>
 
    <script>
-   // Map
+      // Map
 
-   var lon;
-   var lat;
+      var lon;
+      var lat;
 
-   navigator.geolocation.getCurrentPosition(function (pos, err) {
-      lon = pos.coords.longitude;
-      lat = pos.coords.latitude;
+      navigator.geolocation.getCurrentPosition(function (pos, err) {
+         lon = pos.coords.longitude;
+         lat = pos.coords.latitude;
 
-      if (err) console.log('Error: ' + err)
-   });
+         if (err) console.log('Error: ' + err)
+      });
 
-   var map = new ol.Map({
-      target: 'map',
-      layers: [
-         new ol.layer.Tile({
-            source: new ol.source.OSM()
+      var map = new ol.Map({
+         target: 'map',
+         layers: [
+            new ol.layer.Tile({
+               source: new ol.source.OSM()
+            })
+         ],
+         view: new ol.View({
+            center: ol.proj.fromLonLat([
+               lon || 4.3577896,
+               lat || 50.8457606
+            ]),
+            zoom: 12
          })
-      ],
-      view: new ol.View({
-         center: ol.proj.fromLonLat([
-            lon || 4.3577896, 
-            lat || 50.8457606
-         ]),
-         zoom: 12
-      })
-   });
+      });
 
-   // Map marker
+      // Map marker
 
-   var marker = new ol.Feature({
-      geometry: new ol.geom.Point(
-         ol.proj.fromLonLat([
-            lon || 4.3577896, 
-            lat || 50.8457606
-         ])
-      )
-   });
+      var marker = new ol.Feature({
+         geometry: new ol.geom.Point(
+            ol.proj.fromLonLat([
+               lon || 4.3577896,
+               lat || 50.8457606
+            ])
+         )
+      });
 
-   marker.setStyle(new ol.style.Style({
-      image: new ol.style.Icon({
-         crossOrigin: 'anonymous',
-         src: 'assets/img/pin.png'
-      })
-   }));
+      marker.setStyle(new ol.style.Style({
+         image: new ol.style.Icon({
+            crossOrigin: 'anonymous',
+            src: 'assets/img/pin.png'
+         })
+      }));
 
-   var vectorSource = new ol.source.Vector({
-      features: [marker]
-   });
+      var vectorSource = new ol.source.Vector({
+         features: [marker]
+      });
 
-   var markerVectorLayer = new ol.layer.Vector({
-      source: vectorSource
-   });
+      var markerVectorLayer = new ol.layer.Vector({
+         source: vectorSource
+      });
 
-   map.addLayer(markerVectorLayer);
+      map.addLayer(markerVectorLayer);
    </script>
-   
+
 </body>
 
 </html>
