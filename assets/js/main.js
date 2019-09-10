@@ -1,4 +1,7 @@
 $(function(){
+
+   // Gallery
+
    var $gallery = $('.gallery a').simpleLightbox();
    $gallery.on('show.simplelightbox', function(){
       console.log('Requested for showing');
@@ -40,4 +43,6 @@ $(function(){
       console.log('No image found, go to the next/prev');
       console.log(e);
    });
+
 });
+

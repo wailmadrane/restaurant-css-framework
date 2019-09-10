@@ -113,6 +113,30 @@ figure {
   color: #72A2C0;
 }
 
+body:not(.welcome) .jumbotron {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-filter: grayscale(25%);
+          filter: grayscale(25%);
+  position: relative;
+}
+
+body:not(.welcome) .jumbotron::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+body:not(.welcome) .jumbotron * {
+  position: relative;
+  z-index: 1;
+}
+
 .footer__social {
   /* background-color: darkblue; */
   background-color: #00743F;
@@ -160,6 +184,14 @@ figure {
   }
 }
 
+.menu-page .jumbotron {
+  background-image: url("../img/background02.jpg");
+}
+
+.pictures .jumbotron {
+  background-image: url("../img/background01.jpg");
+}
+
 .gallery a {
   overflow: hidden;
 }
@@ -174,13 +206,17 @@ figure {
           transform: scale(1.05);
 }
 
+.restaurant .jumbotron {
+  background-image: url("../img/background03.jpg");
+}
+
+.map {
+  height: 300px;
+  width: 100%;
+}
+
 .contact .jumbotron {
-  background-image: url("../img/drink03.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  -webkit-filter: grayscale(25%);
-          filter: grayscale(25%);
+  background-image: url("../img/background04.jpg");
 }
 
 .contact .form-control {

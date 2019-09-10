@@ -1,4 +1,5 @@
 // ### Header
+
 .hero {
    @media screen and (min-width: 1024px) {
       text-align: center;
@@ -13,5 +14,33 @@
    &:hover {
       background-color: $dark-blue;
       color: $light-blue;
+   }
+}
+
+
+body:not(.welcome) {
+   .jumbotron {
+      background: {
+         size: cover;
+         position: center;
+         attachment: fixed;
+      }
+      filter: grayscale(25%);
+      position: relative;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         right: 0;
+         bottom: 0;
+         background-color: rgba(0, 0, 0, .3);
+      }
+
+      * {
+         position: relative;
+         z-index: 1;
+      }
    }
 }

@@ -20,6 +20,9 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
       integrity="sha256-zmfNZmXoNWBMemUOo1XUGFfc0ihGGLYdgtJS3KCr/l0=" crossorigin="anonymous" />
 
+   <!-- Openlayers -->
+   <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+
    <!-- Style css -->
    <link rel="stylesheet" href="assets/css/style.css">
 
@@ -251,19 +254,20 @@
    <!-- Jumbotron -->
    <header class="jumbotron jumbotron-fluid mb-0 hero">
       <div class="container px-4 px-sm-1 my-sm-5">
-         <h1 class="display-4">Restaurant</h1>
+         <h1 class="display-4 text-white">Restaurant</h1>
       </div>
    </header>
 
-   <!-- Panels -->
+   <!-- A propos -->
    <main>
       <div class="container">
 
          <div class="row">
-
+            
          </div>
 
       </div>
+      <div id="map" class="map"></div>
    </main>
 
    <footer class="footer">
@@ -300,11 +304,69 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>
 
-   <!-- MDBootstrap js -->
-   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/js/mdb.min.js"></script>
+   <!-- Openlayers -->
+   <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
 
    <!-- main js  -->
    <script src="assets/js/main.js"></script>
+
+   <script>
+   // Map
+
+   var lon;
+   var lat;
+
+   navigator.geolocation.getCurrentPosition(function (pos, err) {
+      lon = pos.coords.longitude;
+      lat = pos.coords.latitude;
+
+      if (err) console.log('Error: ' + err)
+   });
+
+   var map = new ol.Map({
+      target: 'map',
+      layers: [
+         new ol.layer.Tile({
+            source: new ol.source.OSM()
+         })
+      ],
+      view: new ol.View({
+         center: ol.proj.fromLonLat([
+            lon || 4.3577896, 
+            lat || 50.8457606
+         ]),
+         zoom: 12
+      })
+   });
+
+   // Map marker
+
+   var marker = new ol.Feature({
+      geometry: new ol.geom.Point(
+         ol.proj.fromLonLat([
+            lon || 4.3577896, 
+            lat || 50.8457606
+         ])
+      )
+   });
+
+   marker.setStyle(new ol.style.Style({
+      image: new ol.style.Icon({
+         crossOrigin: 'anonymous',
+         src: 'assets/img/pin.png'
+      })
+   }));
+
+   var vectorSource = new ol.source.Vector({
+      features: [marker]
+   });
+
+   var markerVectorLayer = new ol.layer.Vector({
+      source: vectorSource
+   });
+
+   map.addLayer(markerVectorLayer);
+   </script>
    
 </body>
 

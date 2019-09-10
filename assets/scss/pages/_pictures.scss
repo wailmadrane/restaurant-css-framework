@@ -1,6 +1,14 @@
 
 // #### Pictures
 
+.pictures {
+   .jumbotron {
+      background: {
+         image: url('../img/background01.jpg');
+      }
+   }
+}
+
 .gallery {
    a {
       overflow: hidden;
@@ -14,4 +22,6 @@
          transform: scale(1.05);
       }
    }
+   
 }
+
