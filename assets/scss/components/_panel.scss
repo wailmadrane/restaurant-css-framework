@@ -52,7 +52,8 @@
 
 		background-color: rgb(56, 64, 71);
 		opacity: 0.5;
-		transition: 0.3s opacity ease-in-out;
+
+		transition: 0.3s all ease-in-out;
 	}
 
 	&:hover::before {

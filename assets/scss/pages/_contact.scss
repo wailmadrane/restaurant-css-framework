@@ -1,0 +1,18 @@
+
+// #### Contact
+
+.contact {
+   .jumbotron {
+      background: {
+         image: url('../img/drink03.jpg');
+         size: cover;
+         position: center;
+         attachment: fixed;
+      }
+      filter: grayscale(25%);
+   }
+
+   .form-control {
+      background-color: transparent;
+   }
+}

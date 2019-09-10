@@ -56,8 +56,8 @@ font-family: 'Montserrat', sans-serif;
   bottom: 0;
   background-color: #384047;
   opacity: 0.5;
-  -webkit-transition: 0.3s opacity ease-in-out;
-  transition: 0.3s opacity ease-in-out;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
 }
 
 .panel:hover::before {
@@ -89,6 +89,11 @@ a {
 
 strong {
   font-weight: 600;
+}
+
+figure {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 @media screen and (min-width: 1024px) {
@@ -153,5 +158,32 @@ strong {
   .welcome .hero {
     padding: 10rem 0 !important;
   }
+}
+
+.gallery a {
+  overflow: hidden;
+}
+
+.gallery a img {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.gallery a:hover img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.contact .jumbotron {
+  background-image: url("../img/drink03.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  -webkit-filter: grayscale(25%);
+          filter: grayscale(25%);
+}
+
+.contact .form-control {
+  background-color: transparent;
 }
 /*# sourceMappingURL=style.css.map */

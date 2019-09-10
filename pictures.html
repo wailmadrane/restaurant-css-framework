@@ -16,9 +16,12 @@
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-   <!-- Font Awesome -->
+   <!-- Font Awesome css -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
       integrity="sha256-zmfNZmXoNWBMemUOo1XUGFfc0ihGGLYdgtJS3KCr/l0=" crossorigin="anonymous" />
+
+   <!-- Simplelightbox css -->
+   <link href='node_modules/simplelightbox/dist/simplelightbox.min.css' rel='stylesheet' type='text/css'>
 
    <!-- Style css -->
    <link rel="stylesheet" href="assets/css/style.css">
@@ -259,76 +262,37 @@
    <main>
       <div class="container">
 
-         <div class="row">
-            <div class="col-md-12">
-               <div id="mdb-lightbox-ui"></div>
-               <div class="mdb-lightbox no-margin">
-                  <figure class="col-md-4">
-                     <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg"
-                        data-size="1600x1067">
-                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(117).jpg"
-                           class="img-fluid">
-                     </a>
-                  </figure>
-                  <figure class="col-md-4">
-                     <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(98).jpg"
-                        data-size="1600x1067">
-                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(98).jpg"
-                           class="img-fluid" />
-                     </a>
-                  </figure>
-                  <figure class="col-md-4">
-                     <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(131).jpg"
-                        data-size="1600x1067">
-                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(131).jpg"
-                           class="img-fluid" />
-                     </a>
-                  </figure>
-                  <figure class="col-md-4">
-                     <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(123).jpg"
-                        data-size="1600x1067">
-                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg"
-                           class="img-fluid" />
-                     </a>
-                  </figure>
-                  <figure class="col-md-4">
-                     <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(118).jpg"
-                        data-size="1600x1067">
-                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(118).jpg"
-                           class="img-fluid" />
-                     </a>
-                  </figure>
-                  <figure class="col-md-4">
-                     <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(128).jpg"
-                        data-size="1600x1067">
-                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(128).jpg"
-                           class="img-fluid" />
-                     </a>
-                  </figure>
-                  <figure class="col-md-4">
-                     <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(132).jpg"
-                        data-size="1600x1067">
-                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(132).jpg"
-                           class="img-fluid" />
-                     </a>
-                  </figure>
-                  <figure class="col-md-4">
-                     <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg"
-                        data-size="1600x1067">
-                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg"
-                           class="img-fluid" />
-                     </a>
-                  </figure>
-                  <figure class="col-md-4">
-                     <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(133).jpg"
-                        data-size="1600x1067">
-                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(133).jpg"
-                           class="img-fluid" />
-                     </a>
-                  </figure>
-               </div>
-            </div>
+         <div class="gallery row py-5">
+
+            <a class="col-md-4 p-0" href="assets/img/drink01.jpg">
+               <img class="w-100" src="assets/img/drink01.jpg" alt="" title="drink 01" />
+            </a>
+            <a class="col-md-4 p-0" href="assets/img/drink02.jpg">
+               <img class="w-100" src="assets/img/drink02.jpg" alt="" title="drink 02" />
+            </a>
+            <a class="col-md-4 p-0" href="assets/img/drink03.jpg">
+               <img class="w-100" src="assets/img/drink03.jpg" alt="" title="drink 03" />
+            </a>
+
          </div>
+
+         <nav aria-label="Page navigation example">
+            <ul class="pagination">
+               <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                     <span aria-hidden="true">&laquo;</span>
+                  </a>
+               </li>
+               <li class="page-item"><a class="page-link" href="#">1</a></li>
+               <li class="page-item"><a class="page-link" href="#">2</a></li>
+               <li class="page-item"><a class="page-link" href="#">3</a></li>
+               <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                     <span aria-hidden="true">&raquo;</span>
+                  </a>
+               </li>
+            </ul>
+         </nav>
 
       </div>
    </main>
@@ -367,13 +331,13 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"></script>
 
-   <!-- MDBootstrap js -->
-   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.9/js/mdb.min.js"></script>
+   <!-- Simplelightbox js -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+   <script type="text/javascript" src="node_modules/simplelightbox/dist/simple-lightbox.js"></script>
 
    <!-- main js  -->
    <script src="assets/js/main.js"></script>
 
-   
 </body>
 
 </html>
