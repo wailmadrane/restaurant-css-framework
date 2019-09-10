@@ -2,6 +2,9 @@
 
 LiquiFood is an experimental restaurant based in whatever you are :) serving food in liquid form.
 
+![desktop display](assets/img/welcome.jpg)
+To see the website clique [here](https://wailmadrane.github.io/restaurant-css-framework/)
+
 ## Objectif
 
 ### Welcome
@@ -18,7 +21,3 @@ A page about the restaurants (it’s a franchise) with its addresses, a map, and
 
 ### Contact
 A page with a contact form containing the firstname, lastname, email, subject of the message (a drop-down list with multiple options), an area for the message itself and a send button with an icon. Each entry as a title in a semantically correct tag.
-
-![desktop display](assets/img/welcome.jpg)
-
-[the website](https://wailmadrane.github.io/restaurant-css-framework/)
