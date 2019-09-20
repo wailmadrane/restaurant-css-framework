@@ -31,3 +31,23 @@ figure {
    margin: 0 !important;
    padding: 0 !important;
 }
+
+.btn-blue {
+   color: $blue;
+   border: 1px solid $blue;
+   transition: .3s ease-in-out;
+
+   &:hover {
+      background-color: $blue;
+      color: white;
+   }
+
+   &.active {
+      background-color: $blue !important;
+      color: $light-blue;
+   }
+}
+
+.badge-blue {
+   background-color: $blue;
+}
