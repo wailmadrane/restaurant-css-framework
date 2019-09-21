@@ -1,13 +1,23 @@
 # Restaurant with Bootstrap
 
 LiquiFood is an experimental restaurant based in whatever you are :) serving food in liquid form.
+This fictive website is realized using the bootstrap framework, this project is an exercise to familiarize myself to bootstrap and it's class system
 
 ## Wireframe
 
+# welcome
 ![desktop welcome](assets/img/wireframe/welcome.png)
+
+# menu
 ![desktop menu](assets/img/wireframe/menu.png)
+
+# pictures
 ![desktop pictures](assets/img/wireframe/pictures.png)
+
+# restaurant
 ![desktop restaurant](assets/img/wireframe/restaurant.png)
+
+# contact
 ![desktop contact](assets/img/wireframe/contact.png)
 
 
