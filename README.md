@@ -5,19 +5,19 @@ This fictive website is realized using the bootstrap framework, this project is 
 
 ## Wireframe
 
-### welcome
+### welcome page
 ![desktop welcome](assets/img/wireframe/welcome.png)
 
-### menu
+### menu page
 ![desktop menu](assets/img/wireframe/menu.png)
 
-### pictures
+### pictures page
 ![desktop pictures](assets/img/wireframe/pictures.png)
 
-### restaurant
+### restaurant page
 ![desktop restaurant](assets/img/wireframe/restaurant.png)
 
-### contact
+### contact page
 ![desktop contact](assets/img/wireframe/contact.png)
 
 
