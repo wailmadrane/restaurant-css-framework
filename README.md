@@ -38,7 +38,10 @@ A page about the restaurants (it’s a franchise) with its addresses, a map, and
 ### Contact
 A page with a contact form containing the firstname, lastname, email, subject of the message (a drop-down list with multiple options), an area for the message itself and a send button with an icon. Each entry as a title in a semantically correct tag.
 
-![desktop display](assets/img/welcome.jpg)
+## Screen
+
+![desktop display](assets/img/screen/desktop-screen.jpg)
+![mobile display](assets/img/screen/mobile-screen.gif)
 
 To see the website clique: [here](https://wailmadrane.github.io/restaurant-css-framework/)
 
